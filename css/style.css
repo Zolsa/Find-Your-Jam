@@ -1,0 +1,178 @@
+#body-background-img {
+  min-height: 800px;
+  background-color: black;
+  background-image: url("../images/concert.jpg");
+  background-repeat: no-repeat;
+}
+
+body {
+  background-color: black;
+}
+
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-family: 'Abril Fatface', cursive;
+}
+
+h3 {
+  font-family: 'Sedgwick Ave', cursive;
+}
+
+h4 {
+  display: inline;
+}
+
+.panel {  
+  background: rgba(183,222,237,1);
+  background: -moz-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 47%, rgba(33,180,226,1) 99%, rgba(183,222,237,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(47%, rgba(113,206,239,1)), color-stop(99%, rgba(33,180,226,1)), color-stop(100%, rgba(183,222,237,1)));
+  background: -webkit-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 47%, rgba(33,180,226,1) 99%, rgba(183,222,237,1) 100%);
+  background: -o-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 47%, rgba(33,180,226,1) 99%, rgba(183,222,237,1) 100%);
+  background: -ms-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 47%, rgba(33,180,226,1) 99%, rgba(183,222,237,1) 100%);
+  background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 47%, rgba(33,180,226,1) 99%, rgba(183,222,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=0 );
+}
+
+.panel-heading {
+  text-align: center;
+}
+
+#profile-display {
+  min-width: 300px;
+}
+
+#hub-feed {
+  min-width: 350px;
+}
+
+.display-col {
+  margin: 10px;
+}
+
+.font-effect-fire-animation {
+  font-size: 80px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#login-form-panel {
+  width: 50%;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#sign-in-form {
+  margin-bottom: 40px;
+}
+
+#sign-in-modal {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+#event-modal-btn {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#create-user-btn {
+  text-align: center;
+  margin-left: 37px;
+}
+
+#name-profile {
+  font-size: 18px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header-sub-title {
+  text-align: center;
+}
+
+.event-medium-container {
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+  margin-bottom: 5px;
+  height: 100%;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.event-medium-image {
+  border-style: solid;
+  border-color: blue;
+  border-width: 1px;
+  height: 100%;
+  width: 90%;
+}
+
+.event-medium-title {
+  text-align: center;
+}
+
+.event-medium-description {
+  float: left;
+  margin: 5px;
+}
+
+.event-medium-date {
+  float: left;
+  margin: 5px;
+}
+
+.event-medium-location {
+  float: left;
+  margin: 5px;
+}
+
+.event-medium-link {
+  float: left;
+  margin: 5px;
+}
+
+.fade {
+  opacity:0.5;
+}
+
+.fade:hover {
+  opacity:1;
+}
+
+.modal-body {
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+}
+
+.modal.fade{
+  opacity: 1;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  transform: translate(0);
+}
+
+
+
+
+

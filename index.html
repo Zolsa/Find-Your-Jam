@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/parsley.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&effect=fire-animation|Sedgwick+Ave">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2_umCkbXgi9Ulq9r4XpTo8XnwVt8RsIk&callback=initMap">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/parsley.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  </head>
+  
+  <body>
+     
+    <video controls="controls" loop="loop" autoplay="">
+      <source src="https://media.giphy.com/media/3oEduXeT0j1Bl5uWHK/giphy.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+
+      <header>
+        <div class="font-effect-fire-animation">Find Your Jam</div>
+      </header>
+
+      <div id="map"></div>
+
+      <div class="panel panel-primary" id="login-form-panel">
+
+        <div class="panel-heading">
+          <h4 class="panel-title"><strong>Login</strong></h4>
+        </div>
+
+        <div class="panel-body">
+          <!-- Entry Form -->
+          <form name="login-form" id="login-form" data-parsley-validate="">
+
+            <div class="form-group">
+              <label for="user-name-input">User name:</label>
+              <input name="user-name-input" class="form-control" id="user-name-input" type="text" required="" data-parsley-length="[4, 10]" data-parsley-trigger="change">
+            </div>
+
+            <div class="form-group">
+              <label for="email-input">Email:</label>
+              <input name="email-input" class="form-control" id="email-input" type="email" data-parsley-trigger="change" required="">
+            </div>
+
+            <button class="btn btn-primary" id="login-btn" type="submit">Submit</button>
+
+            <button class="btn btn-primary" id="create-user-btn" type="button">Create New Account</button>
+
+          </form>
+    
+        </div>
+      </div>
+
+      <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" id="extra-room">
+
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h3 class="modal-title" id="my-modal-label"><br>
+                    Create New User
+                </h3>
+            </div>
+
+            <div class="modal-body">
+                
+              <form name="sign-in-form" id="sign-in-form" data-parsley-validate="">
+
+              <div class="form-group">
+                <label for="name-input">Name * : </label>
+                <input name="name-input" class="form-control" id="name-input" type="text" required="">
+              </div>
+
+              <div class="form-group">
+                <label for="home-city-input" class="control-label">Home City * : </label>
+                <input name="home-city-input" class="form-control" id="home-city-input" type="text" required="">
+              </div>
+
+              <div class="form-group">
+                <label for="instrument-input" class="control-label">Main Instrument * : </label>
+                <input name="instrument-input" class="form-control" id="instrument-input" type="text" required="">
+              </div>
+
+              <div class="form-group">
+                <label for="user-name-sign-in-input" class="control-label">Username * : </label>
+                <input name="user-name-sign-in-input" class="form-control" id="user-name-sign-input" type="text" required="" data-parsley-length="[4, 10]" data-parsley-trigger="change">
+              </div>
+
+              <div class="form-group">
+                <label for="genre-input" class="control-label">Main Genre * : (select one):</label>
+                <select name="genre-input" class="form-control" id="genre-input" required="">
+                  <option value="">Choose..</option>
+                  <option value="hip-hop">Hip-Hop</option>
+                  <option value="rock">Rock</option>
+                  <option value="pop">Pop</option>
+                  <option value="folk">Folk</option>
+                  <option value="metal">Metal</option>
+                  <option value="bluegrass">BlueGrass</option>
+                  <option value="polka">Polka</option>
+                  <option value="edm">EDM</option>
+                  <option value="blues">Blues</option>
+                  <option value="jazz">Jazz</option>
+                  <option value="latin">Latin</option>
+                  <option value="african">African</option>
+                  <option value="reggae">Reggae</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="email-sign-in-input" class="control-label">Email * :</label>
+                <input name="email-sign-in-input" class="form-control" id="email-sign-input" type="email" required="" data-parsley-trigger="change">
+              </div>
+
+              <div class="form-group">
+                <label for="phone-input" class="control-label">Phone Number:</label>
+                <input name="phone-input" class="form-control" id="phone-input" type="text" placeholder="(###)###-####">
+              </div>
+
+              <div class="form-group">
+                <label for="bands-input1" class="control-label">Favorite Band:</label>
+                <input name="bands-input1" class="form-control" id="bands-input1" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="bands-input2" class="control-label">2nd Favorite Band:</label>
+                <input name="bands-input2" class="form-control" id="bands-input2" type="text">
+              </div>
+              
+              <div class="form-group">
+                <label for="bands-input3" class="control-label">3rd Favorite Band:</label>
+                <input name="bands-input3" class="form-control" id="bands-input3" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="songs-input1" class="control-label">Favorite Song:</label>
+                <input name="songs-input1" class="form-control" id="songs-input1" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="songs-input2" class="control-label">2nd Favorite Song:</label>
+                <input name="songs-input2" class="form-control" id="songs-input2" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="songs-input3" class="control-label">3rd Favorite Song:</label>
+                <input name="songs-input3" class="form-control" id="songs-input3" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="links-input" class="control-label">Links To Your Work:</label>
+                <input name="links-input"class="form-control" id="links-input" type="url">
+              </div>
+
+              <div class="form-group">
+                <label for="about-input" class="control-label">About You:</label>
+                <textarea name="about-input"rows="8" cols="100" class="form-control" id="about-input"></textarea>
+              </div>
+
+              <button class="btn btn-primary" id="add-user-btn" type="submit">Submit</button>
+
+            </form>
+                                
+        </div>
+      </div> 
+
+    </div>
+
+  <script src="./js/index-logic.js"></script>
+
+  </body>
+</html>
