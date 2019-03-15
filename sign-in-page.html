@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Page One</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1 class="text-center">Find Your Jam</h1>
+      </div>
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Register</strong></h3>
+        </div>
+        <div class="panel-body">
+          <!-- Entry Form -->
+          <form>
+
+            <div class="form-group">
+              <label for="name-input">Name</label>
+              <input class="form-control" id="name-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="email-input">Email</label>
+              <input class="form-control" id="email-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="home-city-input">Home City</label>
+              <input class="form-control" id="home-city-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="phone-input">Phone Number</label>
+              <input class="form-control" id="phone-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="username-input">Username</label>
+              <input class="form-control" id="username-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="genre-input">Main Genre</label>
+              <input class="form-control" id="genre-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="songs-input">Favorite Songs</label>
+              <input class="form-control" id="songs-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="bands-input">Favorite Bands</label>
+              <input class="form-control" id="bands-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="links-input">Links to your work</label>
+              <input class="form-control" id="links-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="songs-input">Favorite Songs</label>
+              <input class="form-control" id="songs-input" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="about-input">About You</label>
+              <input class="form-control" id="about-input" type="text">
+            </div>
+
+            <button class="btn btn-primary" id="add-user-btn" type="submit">Submit</button>
+          </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/logic.js"></script>
+  </body>
+</html>
