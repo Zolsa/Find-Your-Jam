@@ -1,1 +1,3 @@
-# Project-1
+# Find-Your-Jam
+
+This was my first project for the Case bootcamp.  We had to use HTML, CSS, and javascript for front end logic only along with firebase.  Its an app for musicians to find other local musicians and/or jam sessions.  Part of the assignment was to use one new library and one API so we used google's geolocation API to track the user and sort events based on distance and parsley for front end form validation.  For actual production I would add a real backend with a more standard database.
